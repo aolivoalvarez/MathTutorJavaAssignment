@@ -24,8 +24,9 @@ public class MathTutor {
 		
 		//loop to determine the user's choice and then commence program
 		do {
-			System.out.print("Would you like to add, subtract, or quit? Press 1 to add, 2 to subtract, and 9 to quit");
+			System.out.print("Would you like to add, subtract, or quit? Press 1 to add, 2 to subtract, and 9 to quit: ");
 			choice = input.nextInt(); //collect's user's choice
+			System.out.println(" ");
 			
 			if (choice == 1){
 				num1 = (int)Math.floor(Math.random()*(max-min+1)+min); //random numbers
@@ -33,14 +34,15 @@ public class MathTutor {
 				
 				compAnswer = num1 + num2; //getting sum
 				
-				System.out.printf("%n%d + %d = :", num1, num2); //displaying numbers + requesting answer
+				System.out.printf("%n%d + %d = : ", num1, num2); //displaying numbers + requesting answer
 				userAnswer =input.nextInt();
 				
 				if (userAnswer == compAnswer){
-					System.out.println("Congrats! You got it right!");
+					System.out.println("Congrats! You got it right!\n");
 					}
 				else {
 					System.out.printf("%nOops! Wrong answer! The answer is: %d", compAnswer);
+					System.out.println("\n");
 				}
 				
 				
@@ -51,18 +53,21 @@ public class MathTutor {
 				
 				compAnswer = num1 - num2; //getting sum
 				
-				System.out.printf("%n%d - %d = :", num1, num2); //displaying numbers + requesting answer
+				System.out.printf("%n%d - %d = : ", num1, num2); //displaying numbers + requesting answer
 				userAnswer = input.nextInt();
 				
 				if (userAnswer == compAnswer){
-					System.out.println("Congrats! You got it right!");
+					System.out.println("Congrats! You got it right!\n");
 					}
 				else {
-					System.out.printf("%nOops! Wrong answer! The answer is: %d", compAnswer);	
+					System.out.printf("%nOops! Wrong answer! The answer is: %d", compAnswer);
+					System.out.println("\n");
 				}
 
 			}
 		}
 		while (choice != 9); //will end loop when user enters 9
+		
+		System.out.println("Thanks for playing!");
 }
 }
